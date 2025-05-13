@@ -12,6 +12,25 @@ console.log(firstFavNumb == secondFavNumb); // loose equality
 console.log(firstFavNumb !== secondFavNumb); // strict inequality
 console.log(firstFavNumb != secondFavNumb); // loose inequality
 
+// exercise to practice logical operators
+
+let password;
+
+if (password == 8){
+    console.log("Welcome");
+}
+else if (password <= 8){
+    console.log("PW is too short");
+}
+else if (password >= 8){
+    console.log("PW is too long");
+    console.log('\n');
+    console.log("It should be 8 characters long");
+}
+else{
+    console.log("Please provide a password");
+}
+
 
 
 
