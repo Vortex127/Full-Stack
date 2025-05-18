@@ -31,6 +31,28 @@ else{
     console.log("Please provide a password");
 }
 
+// exercise to practice switch statement
+
+let fruit = "papaya";
+
+switch (fruit){
+    case "banana":
+        console.log("Banana is good");
+        break;
+    
+    case "orange":
+        console.log("I am not a fan of orange");
+        break;
+    
+    case "apple":
+        console.log("How you like them apples?");
+        break;
+
+    default:
+        console.log("I don't know what you are talking about");
+        break;
+}
+
 
 
 
