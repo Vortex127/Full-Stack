@@ -1,6 +1,6 @@
 let username = "Vortex Khan";
 let ph_number = "123-4567-890";
-let firstName = username.slice(0,6);
+let firstName = username.slice(0,6); //starts from 0(inclusive), ends before 6(exclusive)
 let lastName = username.slice(7, 11);
 let fullname = firstName.concat(" ",lastName);
 
