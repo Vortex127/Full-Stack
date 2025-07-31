@@ -127,3 +127,5 @@ function constScope() {
     console.log("const q (after if block):", q); // Output: const q (after if block): 600 (original 'q' is preserved)
 }
 constScope();
+
+// Var is hoisted and initialized with undefined, meaning it's available in the global scope and can be declared before initialization. Let and const are not hoisted and must be declared before use.
