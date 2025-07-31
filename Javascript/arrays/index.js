@@ -1,4 +1,7 @@
 let fruits = ["apple", "orange", "banana", "mango"];
+let morefruits = ["grapes", "kiwi", "pineapple"];
+let j = morefruits.join("-"); // more readily used in node and express
+console.log(j);
 fruits.push("mango"); //adds the element to the end of the array
 fruits.pop(); //removes the last element from the array
 fruits.unshift("grapes") //adds the element to the beginning of the array
