@@ -1,0 +1,12 @@
+{
+    "name": "Asfand",
+    "age": 21,
+    "email": "asf@gmail.com",
+    "isSubscribed": true,
+    "hobbies": ["Coding", "Reading", "Writing"],
+    "address": {
+        "city": "JFK",
+        "state": "NY",
+        "country": "USA"
+    }
+}
