@@ -78,34 +78,34 @@
 
 // ... existing code ...
 
-// function greet(name, cb, cb2) {
-//     console.log(`Hello, I'm ${name}`);
-//     // Now, we pass a parameter (e.g., a message or the name itself) to the callback
-//     if (typeof cb === "function"){
-//         cb(`It's nice to meet you, ${name}!`);
-//     }
-//     if (typeof cb2 === "function") {
-//         cb2(`${name}`);
-//     }
-// }
+function greet(name, cb, cb2) {
+    console.log(`Hello, I'm ${name}`);
+// Now, we pass a parameter (e.g., a message or the name itself) to the callback
+    if (typeof cb === "function"){
+        cb(`It's nice to meet you, ${name}!`);
+    }
+    if (typeof cb2 === "function") {
+        cb2(`${name}`);
+    }
+}
 
-// // This is our parameterized callback function
-// function sayGoodbye(message) {
-//     console.log(message);
-//     console.log("Goodbye for now!");
-// }
+// This is our parameterized callback function
+function sayGoodbye(message) {
+    console.log(message);
+    console.log("Goodbye for now!");
+}
 
-// // Call greet, passing 'Mirza' as the name and 'sayGoodbye' as the callback
-// greet("Mirza", sayGoodbye, null);
+// Call greet, passing 'Mirza' as the name and 'sayGoodbye' as the callback
+greet("Mirza", sayGoodbye, null);
 
-// // Another example with a different callback
-// function thankYou(personName) {
-//     console.log(`Thank you, ${personName}, for calling me!`);
-// }
+// Another example with a different callback
+function thankYou(personName) {
+    console.log(`Thank you, ${personName}, for calling me!`);
+}
 
-// greet("Alice",null, thankYou);
+greet("Alice",null, thankYou);
 
-// // ... existing code ...
+//  ... existing code ...
 
 // //example 2:
 
@@ -159,33 +159,33 @@
 
 // setInterval won't stop until you set a timeout function for it to pause.
 
-const intervalId = setInterval(
-    function t2 (){
-        console.log("This function is being used to test the interval x timeout combo");
-    },
-    3500
-);
+// const intervalId = setInterval(
+//     function t2 (){
+//         console.log("This function is being used to test the interval x timeout combo");
+//     },
+//     3500
+// );
 
-setTimeout(
-    function (){
-        clearInterval(intervalId);
-        console.log("Stopping the Interval");
-    },
-    10000
-)
+// setTimeout(
+//     function (){
+//         clearInterval(intervalId);
+//         console.log("Stopping the Interval");
+//     },
+//     10000
+// )
 
-function hello(){ // function declaration
-    console.log("Hellow");}
-setTimeout(hello, 3000) // hello is callback function, 3000ms=3secs.
+// function hello(){ // function declaration
+//     console.log("Hellow");}
+// setTimeout(hello, 3000) // hello is callback function, 3000ms=3secs.
 
-const hello = function hello(){ // function expression
-    console.log("Hellow");    
-}
-hello();
+// const hello = function hello(){ // function expression
+//     console.log("Hellow");    
+// }
+// hello();
 
-setTimeout(function(){
-    console.log("Hellow");
-}, 3000) // example of function expression
+// setTimeout(function(){
+//     console.log("Hellow");
+// }, 3000) // example of function expression
 
 // template literals!
 
@@ -204,17 +204,17 @@ setTimeout(function(){
 // jumps over
 // the lazy dog
 
-let string = 
-`the quick
-brown fox
-jumps over
-the lazy dog
-`
+// let string = 
+// `the quick
+// brown fox
+// jumps over
+// the lazy dog
+// `
 
-var fname = "Asfand"
-var lname = "Baig"
+// var fname = "Asfand"
+// var lname = "Baig"
 
-console.log(`My name is ${fname} ${lname}`);
+// console.log(`My name is ${fname} ${lname}`);
 
 
 //instead of using callbacks like we did earlier in map function, we can straight up pass the function:
@@ -250,26 +250,38 @@ console.log(`My name is ${fname} ${lname}`);
 
 // arrow functions below. arrow funcs are a way of writing functions in a more concise way.
 
-// const hello = (name) => {
-//     console.log(`Hello ${name}`);
-//     console.log("You are old");
+// function double (n) {
+//     return n * 2
 // }
-// hello("Bro");
+console.log(double(3));
 
-// setTimeout(() => console.log("Hello")
-// , 3000);
+// the arrow func way of writing the above segment is:
+// can't use the function keyword here when assigning 
+const double = (n) => n * 2
+
+const hello = (name) => {
+    console.log(`Hello ${name}`);
+    console.log("You are old");
+}
+hello("Bro");
+
+setTimeout(() => console.log("Hello")
+, 3000);
 
 const numbers = [1,2,3,4,5,6];
 
+// map is used to create a new array by transforming each element in the original array according to a provided function.
 const squares = numbers.map((element)=> Math.pow
 (element,2));
 const cube = numbers.map((element)=> Math.pow
 (element,3));
+
+// filter is used to create a new array with all elements that pass the test implemented by the provided function.
 const even = numbers.filter((element)=> element % 2 == 0);
 const odd = numbers.filter((element)=> element % 2 == 1);
+
+// reduce is used to apply a function against an accumulator and each value of the array (from left to right) to reduce it to a single value
 const total = numbers.reduce((accumulator, element)=> accumulator + element);
-
-
 console.log(squares);
 console.log(cube);
 console.log(even);
