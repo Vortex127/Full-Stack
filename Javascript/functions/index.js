@@ -289,3 +289,14 @@ console.log(odd);
 console.log(total);
 
 
+
+// Default function parameters, allows you to assign default values to function parameters. When func is called, and arg not provided, the default value will be used instead. Makes it easier to handle cases where arguments might be missing or undefined.
+
+function names (firstname)
+{
+    if (firstname === true) {
+        console.log("Cool name");
+    }
+}
+
+names(true); //In JavaScript, an empty function body {} is equivalent to not having a body at all.
