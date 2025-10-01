@@ -292,11 +292,19 @@ console.log(total);
 
 // Default function parameters, allows you to assign default values to function parameters. When func is called, and arg not provided, the default value will be used instead. Makes it easier to handle cases where arguments might be missing or undefined.
 
-function names (firstname)
-{
-    if (firstname === true) {
-        console.log("Cool name");
-    }
+function multiply(a, b) { // no default paramter meaning no fallback
+  return a * b;
 }
 
-names(true); //In JavaScript, an empty function body {} is equivalent to not having a body at all.
+multiply(5, 2); // 10
+multiply(5); // NaN ! 
+
+function multiply(a, b = 1) { // fallback provided
+  return a * b;
+}
+
+multiply(5, 2); // 10
+multiply(5); // 5
+multiply(5, undefined); // 5
+
+//In JavaScript, an empty function body {} is equivalent to not having a body at all.
