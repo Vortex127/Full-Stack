@@ -53,7 +53,29 @@ switch (fruit){
         break;
 }
 
+// spread operator
 
+const array = [1, 2, 3]; //objects are not iterable but arrays are.
+const obj = { ...array }; // { 0: 1, 1: 2, 2: 3 }
+console.log(obj);
+
+//1. challenge: make a clone of "arr", "arr2" by using spread operator.
+
+let arr1 = [1,2,3];
+let arr2 = [4,5,6];
+let shallowarr = [...arr1, ...arr2];
+console.log(shallowarr);
+
+//2. make a clone of "user" obj using spread operator
+
+let user = {
+    name: "Asfand",
+    age: 21,
+    work: "Software Engineer"
+};
+
+let shallowuser = {...user};
+console.log(shallowuser);
 
 
 
